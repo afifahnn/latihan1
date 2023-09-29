@@ -1,0 +1,153 @@
+/* LOGIN PAGE */
+.login{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+}
+
+.content{
+    width: 450px;
+    height: 280px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.inputButton{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.inputBox input{
+    padding: 10px;
+    width: 200px;
+    height: 20px;
+    margin: 5px;
+    border: 1px solid #000;
+    border-radius: 5px;
+}
+
+.buttonClick button{
+    font-size: medium;
+    font-weight: 600;
+    padding: 10px;
+    width: 220px;
+    height: 40px;
+    margin: 20px;
+    background-color: rgb(60, 117, 60);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+}
+
+.buttonClick button:hover{
+    background-color: rgb(114, 136, 114);
+}
+
+/* DASHBOARD PAGE */
+.dashboard{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+}
+
+.dashboard .content1{
+    display: flex;
+    flex-direction: column;
+    /* background-color: red; */
+    width: 50%;
+    text-align: left;
+}
+
+.dashboard .content2{
+    /* background-color: blue; */
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+    height: 400px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.buttonDashboard{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.buttonDashboard button{
+    font-size: medium;
+    padding: 5px;
+    margin: 20px;
+    width: 100px;
+    height: 50px;
+    background-color: rgb(55, 139, 196);
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+}
+
+.buttonDashboard button:hover{
+    background-color: rgb(78, 114, 138);
+}
+
+.buttonBack button{
+    font-size: medium;
+    font-weight: 600;
+    padding: 10px;
+    width: 180px;
+    height: 40px;
+    margin: 20px;
+    background-color: rgb(60, 117, 60);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+}
+
+.buttonBack button:hover {
+    background-color: rgb(114, 136, 114);   
+}
+
+/* ABOUT US PAGE */
+.aboutUs{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+
+/* GALLERY PAGE */
+.gallery{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.gallery .galleryImg{
+    display: flex;
+    gap: 30px;
+}
+
+.gallery .galleryImg img{
+    transition: transform 0.2s ease-in-out;
+}
+
+.gallery .galleryImg img:hover{
+    transform: scale(1.1);
+}
