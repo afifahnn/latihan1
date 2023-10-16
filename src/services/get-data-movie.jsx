@@ -1,24 +1,29 @@
-import { useQuery } from '@tanstack/react-query'
+// import { useQuery } from '@tanstack/react-query'
 import http from '../utils/http'
 import { API_ENDPOINT } from '../utils/api-endpoint'
 
+const getDataMovie = async () => {
+    const response = await http.get(API_ENDPOINT.NOW_PLAYING);
+    return response.data;
+};
+
 // setting pertama untuk hit API
-const fetchDataMovie = async (queryKey) => {
+// const fetchDataMovie = async ({queryKey}) => {
     // untuk handle API
     // V3
     // const {data} = await http.get(`${API_ENDPOINT.NOW_PLAYING}?page=${ page ? page : 1 }`)
     // V4
-    const [_key, _param] = queryKey;
-    const { data } = await http.get(_key, { params: _param });
-    return data
-}
+//     const [_key, _param] = queryKey;
+//     const { data } = await http.get(_key, { params: _param });
+//     return data
+// }
 
 // untuk dinamis handle
-const useMovieDataQuery = (options) => {
+// const useMovieDataQuery = (options) => {
     // V3
     // return useQuery(["userData", page], () => fetchDataMovie(page));
     // V4
-    return useQuery([API_ENDPOINT.NOW_PLAYING, options], fetchDataMovie());
-}
+//     return useQuery([API_ENDPOINT.NOW_PLAYING, options], fetchDataMovie());
+// }
 
-export {fetchDataMovie, useMovieDataQuery}
+export {getDataMovie}
