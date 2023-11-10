@@ -4,18 +4,25 @@ import { useLoginUser } from "../../services/auth/login_user";
 import { Link } from "react-router-dom";
 import { GrMail } from "react-icons/gr";
 import { RiLockPasswordFill } from "react-icons/ri";
+import { GoogleLogin } from '@react-oauth/google';
+import { useDispatch } from "react-redux";
+import { LoginUser } from "../../redux/action/authLogin";
 
 export const LoginPage = () => {
   const [Email, setEmail] = useState("");
   const [Password, setPassword] = useState("");
 
+  const dispatch = useDispatch();
+
   const { mutate: loginUser, data, isSuccess, error } = useLoginUser();
 
   const login = () => {
-    loginUser({
-      email: Email,
-      password: Password,
-    });
+    dispatch(LoginUser(
+      {
+        email: Email,
+        password: Password,
+      }
+    ));
   };
 
   if (isSuccess && data) {
@@ -45,6 +52,16 @@ export const LoginPage = () => {
     <div className="flex flex-col justify-center items-center h-screen bg-slate-900">
       <div className="flex flex-col justify-center items-center space-y-4 py-[4rem] px-[3rem] rounded-lg bg-slate-100 shadow-lg">
         <div className="text-[1.5rem] font-bold">LOGIN</div>
+
+        <GoogleLogin
+          onSuccess={credentialResponse => {
+            console.log(credentialResponse);
+          }}
+          onError={() => {
+            console.log('Login Failed');
+          }}
+        />
+
         <div className="space-y-3">
           <div className="flex justify-between items-center border-2 w-[20rem] h-[3rem] py-1 px-4 rounded-3xl shadow-lg border-slate-300">
             <div>

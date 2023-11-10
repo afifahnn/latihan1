@@ -1,0 +1,17 @@
+import { createSlice } from "@reduxjs/toolkit";
+
+const initialState = {
+    token : "",
+    isLogin : "",
+    user : ""
+}
+
+const authMovie = createSlice ({
+    name : "",
+    initialState,
+    reducers : {
+        
+    }
+})
+
+export default authMovie.reducer;

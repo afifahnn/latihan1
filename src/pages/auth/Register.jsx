@@ -48,7 +48,7 @@ export const Register = () => {
 
   return (
     <div className='flex flex-col justify-center items-center h-screen bg-slate-900'>
-        <div className='flex flex-col justify-center items-center space-y-4 py-[4rem] px-[3rem] rounded-lg bg-slate-100 shadow-lg'>
+      <div className='flex flex-col justify-center items-center space-y-4 py-[4rem] px-[3rem] rounded-lg bg-slate-100 shadow-lg'>
         <div className='text-[1.5rem] font-bold'>REGISTER</div>
         <div className='space-y-3'>
             <div className='flex justify-between items-center border-2 w-[20rem] h-[3rem] py-1 px-4 rounded-3xl shadow-lg border-slate-300'>

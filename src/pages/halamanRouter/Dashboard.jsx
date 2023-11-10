@@ -32,7 +32,7 @@ export const Dashboard = () => {
             Movielist
           </div>
           <div className="flex gap-4">
-            <div className="px-5 py-1 border-2 border-white  bg-transparent rounded-3xl text-white hover:opacity-70">
+            <div className="px-5 py-1 border-2 border-white bg-transparent rounded-3xl text-white hover:opacity-70">
               <button onClick={() => {
                 CookieStorage.remove(CookieKeys.AuthToken)
                 window.location.href = '/'
